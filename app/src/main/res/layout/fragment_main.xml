@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.MainFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_main"
+        style="@style/toolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_main"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_currency_one"
+        style="@style/textInputLayout"
+        android:hint="@string/enter_value"
+        app:layout_constraintBottom_toTopOf="@+id/upper20HorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper20HorizontalGuideline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_currency_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_currency_two"
+        style="@style/textInputLayout"
+        android:hint="@string/enter_value"
+        app:layout_constraintBottom_toTopOf="@+id/upper20HorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper20HorizontalGuideline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_currency_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/img_compare"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:contentDescription="@string/compare"
+        android:src="@drawable/ic_compare_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/abbreviation_One"
+        app:layout_constraintEnd_toEndOf="@+id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_currency_one" />
+
+    <TextView
+        android:id="@+id/abbreviation_One"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_layout_currency_one"
+        app:layout_constraintEnd_toEndOf="@+id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper40HorizontalGuideline"
+        tools:text="abbreviation_One" />
+
+    <TextView
+        android:id="@+id/abbreviation_Two"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_layout_currency_two"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper40HorizontalGuideline"
+        tools:text="abbreviation_Two" />
+
+    <TextView
+        android:id="@+id/currency_One"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toTopOf="@+id/upper40HorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper40HorizontalGuideline"
+        tools:text="currency_1" />
+
+    <TextView
+        android:id="@+id/currency_Two"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toTopOf="@+id/upper40HorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/upper40HorizontalGuideline"
+        tools:text="currency_2" />
+
+    <TextView
+        android:id="@+id/change_currency_one"
+        style="@style/change_currency_txt"
+        app:layout_constraintBottom_toTopOf="@+id/centerHorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/centerHorizontalGuideline"
+        tools:text="change_currency_one" />
+
+    <TextView
+        android:id="@+id/change_currency_two"
+        style="@style/change_currency_txt"
+        app:layout_constraintBottom_toTopOf="@+id/centerHorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/centerHorizontalGuideline"
+        tools:text="change_currency_two" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/upper40HorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/upper20HorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerHorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/main_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="text_input_layout_currency_one,
+        text_input_layout_currency_two,
+        img_compare, abbreviation_One, abbreviation_Two, currency_One, currency_Two,
+        change_currency_one, change_currency_two" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
