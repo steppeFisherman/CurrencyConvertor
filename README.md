@@ -8,4 +8,4 @@ ___
 ___
 _Стэк:_
 
-__Retrofit, Hilt, Navigation Component, MVVM, LiveData, Kotlin Coroutines, Glide, ViewBinding, Clean Architecture__
+__Retrofit, Hilt, Navigation Component, MVVM, LiveData, Kotlin Coroutines, ViewBinding, Clean Architecture__
